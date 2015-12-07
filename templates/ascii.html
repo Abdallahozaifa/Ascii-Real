@@ -1,0 +1,35 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<title>Ascii Chan-Real</title>
+	</head>
+
+	<body>
+		<h1>/Ascii Chan/</h1>
+		<form method="post">
+			<label>
+				<div>Title</div>
+				<input type="text" name="title" value="{{title}}">
+			</label>
+
+			<label>
+				<div>Art</div>
+				<textarea name="art" value="{{art}}"></textarea>
+			</label>
+			<div style="color:red">
+				{{error}}
+			</div>
+			<div>
+				<input type="submit">
+			</div>
+		</form>
+
+		<hr>
+		{% for art in arts%}
+			<div class="art">
+				<div class="art-title">{{art.title}}</div>
+				<pre class="art-content">{{art.art}}</pre>
+			</div>
+		{% endfor %}
+	</body>
+</html>
